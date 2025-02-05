@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ poll.question }}</title>
+</head>
+<body>
+    <h1>{{ poll.question }}</h1>
+    <form method="post">
+        {% for choice in choices %}
+            <input type="radio" name="choice" value="{{ choice.id }}"> {{ choice.text }}<br>
+        {% endfor %}
+        <button type="submit">Vote</button>
+    </form>
+</body>
+</html>
+
